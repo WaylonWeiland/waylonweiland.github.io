@@ -1,41 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waylon Weiland</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #f5f5f5;
+      margin: 0;
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      font-family: Georgia, serif;
+      color: #f5f0e1;
+      background-color: #1b1a17;
+      overflow-x: hidden;
+    }
+
+    header {
       text-align: center;
-      padding: 40px;
+      padding: 80px 20px;
+      background: rgba(0, 0, 0, 0.8);
     }
-    h1 {
-      font-size: 3em;
+
+    header h1 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4em;
+      margin: 0;
+      color: #d4af37;
     }
-    a {
-      color: #ff9900;
-      text-decoration: none;
+
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #ccc;
     }
-    .links {
-      margin-top: 30px;
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
     }
-    .links a {
-      display: block;
-      margin: 10px 0;
+
+    .quote-rotator {
+      font-style: italic;
+      font-size: 1.4em;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .youtube-embed {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+    }
+
+    .coming-soon {
+      text-align: center;
+      border: 2px dashed #d4af37;
+      padding: 30px;
       font-size: 1.2em;
+      color: #d4af37;
+    }
+
+    .social-icons {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .social-icons a {
+      color: #d4af37;
+      font-size: 1.8em;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <h1>Waylon Weiland</h1>
-  <p>Outlaw country. Dirty rock. Southern sass.</p>
-  <div class="links">
-    <a href="https://linktr.ee/waylonweiland" target="_blank">Linktree</a>
-    <a href="https://youtube.com/@waylonweiland" target="_blank">YouTube</a>
-    <a href="https://open.spotify.com/artist/YOURSPOTIFYID" target="_blank">Spotify</a>
+  <header>
+    <h1>Waylon Weiland</h1>
+    <p>Country grit meets rock & ruin</p>
+    <div class="quote-rotator" id="quoteRotator"></div>
+  </header>
+
+  <div class="section">
+    <h2>Watch</h2>
+    <div class="youtube-embed">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+    </div>
+    <div class="youtube-embed">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+    </div>
   </div>
+
+  <div class="section coming-soon">
+    <p><strong>Merch Coming Soon!</strong><br />
+    Whiskey-soaked tees, outlaw stickers, and more.</p>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://facebook.com/waylonweiland" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://tiktok.com/@waylonweiland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://instagram.com/waylonweiland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@waylonweiland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <script>
+    const quotes = [
+      "Whiskey don't lie. Neither do I.",
+      "You're my first call after last call... and I'm not over you yet.",
+      "If you wanna butter this biscuit, better roll that die.",
+      "Mixed her sweet nothings with gin and vermouth."
+    ];
+    let quoteIndex = 0;
+    const rotator = document.getElementById('quoteRotator');
+
+    function rotateQuotes() {
+      rotator.textContent = quotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+    }
+
+    rotateQuotes();
+    setInterval(rotateQuotes, 4000);
+  </script>
 </body>
 </html>
+
