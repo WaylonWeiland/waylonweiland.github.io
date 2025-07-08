@@ -9,17 +9,24 @@
   <style>
     body {
       margin: 0;
-      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
       font-family: Georgia, serif;
       color: #f5f0e1;
       background-color: #1b1a17;
-      overflow-x: hidden;
+      background-image: url('waylon_weiland_logo_header.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       text-align: center;
       padding: 80px 20px;
       background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
     }
 
     header h1 {
@@ -36,16 +43,9 @@
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 160px 20px 60px; /* Top padding adjusted for fixed header */
       max-width: 900px;
       margin: auto;
-    }
-
-    .quote-rotator {
-      font-style: italic;
-      font-size: 1.4em;
-      text-align: center;
-      margin-top: 20px;
     }
 
     .youtube-embed {
@@ -60,12 +60,24 @@
       border: none;
     }
 
-    .coming-soon {
+    .coming-soon, .song-releases {
       text-align: center;
       border: 2px dashed #d4af37;
       padding: 30px;
       font-size: 1.2em;
       color: #d4af37;
+      margin-top: 40px;
+    }
+
+    .song-releases ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .song-releases li {
+      margin-bottom: 10px;
+      color: #fff;
     }
 
     .social-icons {
@@ -89,7 +101,6 @@
   <header>
     <h1>Waylon Weiland</h1>
     <p>Country grit meets rock & ruin</p>
-    <div class="quote-rotator" id="quoteRotator"></div>
   </header>
 
   <div class="section">
@@ -100,11 +111,22 @@
     <div class="youtube-embed">
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
     </div>
-  </div>
 
-  <div class="section coming-soon">
-    <p><strong>Merch Coming Soon!</strong><br />
-    Whiskey-soaked tees, outlaw stickers, and more.</p>
+    <div class="song-releases">
+      <strong>Upcoming Releases</strong>
+      <ul>
+        <li><strong>Whiskey Don’t Lie</strong> – July 15, 2025</li>
+        <li><strong>First Call After Last Call</strong> – August 1, 2025</li>
+        <li><strong>Justice Cause</strong> – August 15, 2025</li>
+        <li><strong>Big Ol' Titties</strong> – September 1, 2025</li>
+        <li><strong>Crave the Wreckage</strong> – September 20, 2025</li>
+      </ul>
+    </div>
+
+    <div class="coming-soon">
+      <p><strong>Merch Coming Soon!</strong><br />
+      Whiskey-soaked tees, outlaw stickers, and more.</p>
+    </div>
   </div>
 
   <div class="social-icons">
@@ -112,25 +134,7 @@
     <a href="https://tiktok.com/@yourusername" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://youtube.com/@yourusername" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://music.apple.com/us/artist/yourusername" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
   </div>
-
-  <script>
-    const quotes = [
-      "Whiskey don't lie. Neither do I.",
-      "You're my first call after last call... and I'm not over you yet.",
-      "If you wanna butter this biscuit, better roll that die.",
-      "Mixed her sweet nothings with gin and vermouth."
-    ];
-    let quoteIndex = 0;
-    const rotator = document.getElementById('quoteRotator');
-
-    function rotateQuotes() {
-      rotator.textContent = quotes[quoteIndex];
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-    }
-
-    rotateQuotes();
-    setInterval(rotateQuotes, 4000);
-  </script>
 </body>
 </html>
