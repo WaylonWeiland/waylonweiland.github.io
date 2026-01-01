@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3987038111742405"
      crossorigin="anonymous"></script>
+
   <style>
     body {
       margin: 0;
@@ -62,7 +63,7 @@
       justify-content: space-between;
     }
 
-    .youtube-column, .releases-column {
+    .videos-column {
       flex: 1 1 45%;
     }
 
@@ -74,24 +75,6 @@
       width: 100%;
       height: 315px;
       border: none;
-    }
-
-    .song-releases {
-      border: 2px dashed #d4af37;
-      padding: 20px;
-      font-size: 1.2em;
-      color: #d4af37;
-    }
-
-    .song-releases ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    .song-releases li {
-      margin-bottom: 10px;
-      color: #fff;
     }
 
     .coming-soon {
@@ -119,16 +102,14 @@
       color: #ffffff;
     }
 
-    .adsense-placeholder {
-      text-align: center;
-      margin-top: 60px;
-      padding: 20px;
-      border: 1px dashed #444;
-      color: #888;
-      font-style: italic;
+    @media (max-width: 768px) {
+      iframe {
+        height: 240px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header id="mainHeader">
     <img src="waylon_weiland_logo_header.jpg" alt="Waylon Weiland" class="header-logo" />
@@ -137,26 +118,29 @@
 
   <div class="section">
     <div class="content-grid">
-      <div class="youtube-column">
+      <!-- LEFT COLUMN: original videos -->
+      <div class="videos-column">
         <h2>Watch</h2>
+
         <div class="youtube-embed">
           <iframe src="https://www.youtube.com/embed/7qNM7wy_mg0" allowfullscreen></iframe>
         </div>
+
         <div class="youtube-embed">
           <iframe src="https://www.youtube.com/embed/fMJVysM09QY" allowfullscreen></iframe>
         </div>
       </div>
 
-      <div class="releases-column">
-        <div class="song-releases">
-          <strong>Upcoming Releases</strong>
-          <ul>
-            <li><strong>Nose Beers</strong> – July 17, 2025</li>
-            <li><strong>The Ballad of Buster Hymen</strong> – July 24, 2025</li>
-            <li><strong>Red River Blues</strong> – July 31, 2025</li>
-            <li><strong>It Ain't Easy Being Sleazy</strong> – August 6, 2025</li>
-            <li><strong>Bourbon is my Best Friend</strong> – August 13, 2025</li>
-          </ul>
+      <!-- RIGHT COLUMN: new drops -->
+      <div class="videos-column">
+        <h2>New Drops</h2>
+
+        <div class="youtube-embed">
+          <iframe src="https://www.youtube.com/embed/RpnDvgsXO9w" allowfullscreen></iframe>
+        </div>
+
+        <div class="youtube-embed">
+          <iframe src="https://www.youtube.com/embed/GhaZYitqWHI" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -166,12 +150,13 @@
       Whiskey-soaked tees, outlaw stickers, and more.</p>
     </div>
 
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61576868026667#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://tiktok.com/@waylonweiland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://instagram.com/waylonweiland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com/@waylonweiland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://music.apple.com/us/artist/waylon-weiland/1821978193" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61576868026667#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://tiktok.com/@waylonweiland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://instagram.com/waylonweiland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@waylonweiland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://music.apple.com/us/artist/waylon-weiland/1821978193" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+    </div>
   </div>
 
   <script>
