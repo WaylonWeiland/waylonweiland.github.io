@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waylon Weiland</title>
+
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3987038111742405"
      crossorigin="anonymous"></script>
 
@@ -31,24 +34,10 @@
       transition: all 0.3s ease;
     }
 
-    .header-logo {
-      height: 100px;
-      transition: all 0.3s ease;
-    }
-
-    .mini-logo {
-      height: 50px;
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    header.shrunk .header-logo {
-      display: none;
-    }
-
-    header.shrunk .mini-logo {
-      display: inline;
-    }
+    .header-logo { height: 100px; transition: all 0.3s ease; }
+    .mini-logo { height: 50px; display: none; transition: all 0.3s ease; }
+    header.shrunk .header-logo { display: none; }
+    header.shrunk .mini-logo { display: inline; }
 
     .section {
       padding: 120px 20px 60px;
@@ -63,19 +52,71 @@
       justify-content: space-between;
     }
 
-    .videos-column {
-      flex: 1 1 45%;
-    }
-
-    .youtube-embed {
-      margin-bottom: 30px;
-    }
+    .videos-column { flex: 1 1 45%; }
+    .youtube-embed { margin-bottom: 30px; }
 
     iframe {
       width: 100%;
       height: 315px;
       border: none;
     }
+
+    /* Section titles */
+    .section-title {
+      display: inline-block;
+      margin: 0 0 20px;
+      padding-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title--accent {
+      border-bottom: 2px solid #d4af37;
+      box-shadow: 0 6px 0 rgba(212, 175, 55, 0.12);
+    }
+
+    /* Spotify embed block */
+    .spotify-embed {
+      margin-top: 6px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(0,0,0,0.25);
+    }
+    .spotify-embed iframe { height: 352px; border: 0; }
+
+    /* CTAs */
+    .cta-wrap {
+      text-align: center;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 1.05em;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.25s ease, color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background: #d4af37;
+      color: #1b1a17;
+      transform: translateY(-1px);
+    }
+
+    .cta-button.secondary { border-style: dashed; }
 
     .coming-soon {
       text-align: center;
@@ -86,9 +127,77 @@
       margin-top: 40px;
     }
 
+    /* Contact section */
+    .contact {
+      margin-top: 40px;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 16px;
+      background: rgba(0,0,0,0.25);
+      padding: 18px;
+    }
+
+    .contact h3 {
+      margin: 0 0 12px;
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.95em;
+      color: rgba(245,240,225,0.85);
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(212,175,55,0.25);
+      background: rgba(0,0,0,0.35);
+      color: #f5f0e1;
+      outline: none;
+      font-family: Georgia, serif;
+    }
+
+    .field textarea { min-height: 120px; resize: vertical; }
+
+    .contact-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .tiny-note {
+      margin-top: 10px;
+      color: rgba(245,240,225,0.7);
+      font-size: 0.95em;
+      line-height: 1.45;
+    }
+
+    .hidden-honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* Social icons */
     .social-icons {
       text-align: center;
-      padding: 40px 0;
+      padding: 40px 0 10px;
     }
 
     .social-icons a {
@@ -96,16 +205,37 @@
       font-size: 1.8em;
       margin: 0 15px;
       transition: color 0.3s;
+      text-decoration: none;
     }
 
-    .social-icons a:hover {
+    .social-icons a:hover { color: #ffffff; }
+
+    /* Footer links */
+    .footer-links {
+      text-align: center;
+      padding-bottom: 30px;
+      font-size: 0.95em;
+      color: rgba(245,240,225,0.7);
+    }
+
+    .footer-links a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
       color: #ffffff;
+      text-decoration: underline;
     }
 
+    /* Mobile: stack columns and show New Drops first */
     @media (max-width: 768px) {
-      iframe {
-        height: 240px;
-      }
+      iframe { height: 240px; }
+      .content-grid { flex-direction: column; }
+      .videos-column { flex: 1 1 100%; }
+      .videos-column.new-drops { order: -1; }
+      .contact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -120,7 +250,7 @@
     <div class="content-grid">
       <!-- LEFT COLUMN: original videos -->
       <div class="videos-column">
-        <h2>Watch</h2>
+        <h2 class="section-title">Watch</h2>
 
         <div class="youtube-embed">
           <iframe src="https://www.youtube.com/embed/7qNM7wy_mg0" allowfullscreen></iframe>
@@ -131,9 +261,9 @@
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: new drops -->
-      <div class="videos-column">
-        <h2>New Drops</h2>
+      <!-- RIGHT COLUMN: new drops + Spotify embed -->
+      <div class="videos-column new-drops">
+        <h2 class="section-title section-title--accent">New Drops</h2>
 
         <div class="youtube-embed">
           <iframe src="https://www.youtube.com/embed/RpnDvgsXO9w" allowfullscreen></iframe>
@@ -142,7 +272,41 @@
         <div class="youtube-embed">
           <iframe src="https://www.youtube.com/embed/GhaZYitqWHI" allowfullscreen></iframe>
         </div>
+
+        <div class="spotify-embed" aria-label="Spotify Artist Player">
+          <iframe
+            src="https://open.spotify.com/embed/artist/4j6qHDwChoSLyJjKfOsvnk?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
       </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="cta-wrap">
+      <a class="cta-button track"
+         data-track="cta_youtube_subscribe"
+         href="https://youtube.com/@waylonweiland?sub_confirmation=1"
+         target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+        Subscribe on YouTube
+      </a>
+
+      <a class="cta-button secondary track"
+         data-track="cta_spotify_follow"
+         href="https://open.spotify.com/artist/4j6qHDwChoSLyJjKfOsvnk"
+         target="_blank" rel="noopener">
+        <i class="fab fa-spotify"></i>
+        Follow on Spotify
+      </a>
+
+      <a class="cta-button secondary track"
+         data-track="cta_download_presskit_pdf"
+         href="press-kit.pdf"
+         target="_blank" rel="noopener">
+        <i class="fas fa-file-pdf"></i>
+        Download EPK (PDF)
+      </a>
     </div>
 
     <div class="coming-soon">
@@ -150,23 +314,179 @@
       Whiskey-soaked tees, outlaw stickers, and more.</p>
     </div>
 
+    <!-- CONTACT (no backend, spam-safe-ish) -->
+    <div class="contact" id="contact">
+      <h3>Contact / Booking</h3>
+
+      <form id="contactForm" autocomplete="off">
+        <!-- Honeypot (bots fill this, humans won't) -->
+        <div class="hidden-honeypot" aria-hidden="true">
+          <label>Leave this blank</label>
+          <input type="text" id="company" name="company" tabindex="-1" />
+        </div>
+
+        <div class="contact-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Booking / Press / Collab / etc." required />
+          </div>
+
+          <div class="field" style="grid-column: 1 / -1;">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Say what you need. Dates, venue, budget, vibes… whatever." required></textarea>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <button class="cta-button track" data-track="contact_send_email" type="submit">
+            <i class="fas fa-paper-plane"></i>
+            Send Email
+          </button>
+
+          <button class="cta-button secondary track" data-track="contact_copy_email" type="button" id="copyEmailBtn">
+            <i class="fas fa-copy"></i>
+            Copy Email
+          </button>
+
+          <span id="copyStatus" style="color: rgba(245,240,225,0.75);"></span>
+        </div>
+
+        <div class="tiny-note">
+          No creepy forms. This just opens your email app with a pre-filled message. If that doesn’t work, hit “Copy Email.”
+        </div>
+      </form>
+    </div>
+
+    <!-- SOCIALS -->
     <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61576868026667#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://tiktok.com/@waylonweiland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://instagram.com/waylonweiland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com/@waylonweiland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://music.apple.com/us/artist/waylon-weiland/1821978193" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+      <a class="track" data-track="social_facebook" href="https://www.facebook.com/profile.php?id=61576868026667#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a class="track" data-track="social_tiktok" href="https://tiktok.com/@waylonweiland" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a class="track" data-track="social_instagram" href="https://instagram.com/waylonweiland" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="track" data-track="social_youtube" href="https://youtube.com/@waylonweiland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a class="track" data-track="social_apple" href="https://music.apple.com/us/artist/waylon-weiland/1821978193" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+      <a class="track" data-track="social_spotify" href="https://open.spotify.com/artist/4j6qHDwChoSLyJjKfOsvnk" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+
+      <!-- Email icon (obfuscated mailto is handled by JS too) -->
+      <a class="track" data-track="social_email" href="#" id="emailIcon" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a class="track" data-track="footer_presskit" href="press.html">Press Kit</a> •
+      <a class="track" data-track="footer_all_links" href="https://linktr.ee/waylonweiland" target="_blank" rel="noopener">All Links</a> •
+      <a class="track" data-track="footer_contact" href="#contact">Contact</a> •
+      <a class="track" data-track="footer_view_stats" href="#" id="viewStats">View Click Stats</a>
     </div>
   </div>
 
   <script>
+    // Header shrink
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('shrunk');
-      } else {
-        header.classList.remove('shrunk');
+      if (window.scrollY > 50) header.classList.add('shrunk');
+      else header.classList.remove('shrunk');
+    });
+
+    // ---- Simple analytics (works now via localStorage; upgrades automatically if GA4 exists) ----
+    function trackEvent(eventName, data = {}) {
+      // Local storage counter
+      try {
+        const key = 'ww_click_stats_v1';
+        const raw = localStorage.getItem(key);
+        const stats = raw ? JSON.parse(raw) : {};
+        stats[eventName] = (stats[eventName] || 0) + 1;
+        stats._last = new Date().toISOString();
+        localStorage.setItem(key, JSON.stringify(stats));
+      } catch (e) {}
+
+      // If GA4 gtag exists later, send real event automatically
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, data);
       }
+    }
+
+    // Track all elements with .track + data-track
+    document.addEventListener('click', (e) => {
+      const el = e.target.closest('.track');
+      if (!el) return;
+      const name = el.getAttribute('data-track');
+      if (!name) return;
+
+      // Capture outbound destination (best-effort)
+      const href = el.getAttribute('href') || '';
+      trackEvent(name, { link_url: href });
+    });
+
+    // View stats helper (shows a simple alert)
+    document.getElementById('viewStats').addEventListener('click', (e) => {
+      e.preventDefault();
+      try {
+        const stats = JSON.parse(localStorage.getItem('ww_click_stats_v1') || '{}');
+        const lines = Object.entries(stats)
+          .filter(([k]) => !k.startsWith('_'))
+          .sort((a,b) => b[1]-a[1])
+          .map(([k,v]) => `${k}: ${v}`);
+        alert(lines.length ? `Click Stats (local)\n\n${lines.join('\n')}` : 'No click stats yet.');
+      } catch (err) {
+        alert('No click stats yet.');
+      }
+    });
+
+    // ---- Spam-safe-ish email obfuscation ----
+    // (Keeps your email out of the raw HTML as plain text)
+    const emailParts = ['waylonweiland', 'gmail', 'com'];
+    const emailAddress = `${emailParts[0]}@${emailParts[1]}.${emailParts[2]}`;
+
+    // Email icon mailto
+    document.getElementById('emailIcon').addEventListener('click', (e) => {
+      e.preventDefault();
+      trackEvent('social_email_open_mail');
+      window.location.href = `mailto:${emailAddress}`;
+    });
+
+    // Copy email
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyStatus = document.getElementById('copyStatus');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(emailAddress);
+        copyStatus.textContent = 'Copied!';
+        setTimeout(() => copyStatus.textContent = '', 1400);
+      } catch (e) {
+        copyStatus.textContent = 'Copy failed — email: ' + emailAddress;
+      }
+    });
+
+    // Contact form -> opens mail client (no backend)
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Honeypot check
+      const honey = (document.getElementById('company').value || '').trim();
+      if (honey.length) {
+        // Bot submission silently ignored
+        trackEvent('contact_honeypot_blocked');
+        return;
+      }
+
+      const name = (document.getElementById('name').value || '').trim();
+      const subject = (document.getElementById('subject').value || '').trim();
+      const message = (document.getElementById('message').value || '').trim();
+
+      const fullSubject = encodeURIComponent(subject || 'Booking / Press');
+      const fullBody = encodeURIComponent(
+        `Name: ${name}\n\nMessage:\n${message}\n\n— Sent from waylonweiland.com`
+      );
+
+      trackEvent('contact_mailto_submit');
+
+      window.location.href = `mailto:${emailAddress}?subject=${fullSubject}&body=${fullBody}`;
     });
   </script>
 </body>
