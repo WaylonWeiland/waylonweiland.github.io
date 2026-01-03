@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Kit | Waylon Weiland</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: #f5f0e1;
+      background-color: #1b1a17;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px 70px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid rgba(212,175,55,0.25);
+      background: #000;
+    }
+
+    h1 { margin: 0; font-size: 2.0em; letter-spacing: 0.4px; }
+    .tagline { margin: 6px 0 0; color: rgba(245,240,225,0.8); font-size: 1.05em; }
+
+    .card {
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 16px;
+      padding: 18px 18px;
+      margin-top: 16px;
+      background: rgba(0,0,0,0.25);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(245,240,225,0.9);
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 1.05em;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn:hover {
+      background: #d4af37;
+      color: #1b1a17;
+      transform: translateY(-1px);
+    }
+
+    .muted { color: rgba(245,240,225,0.75); }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: rgba(245,240,225,0.7);
+    }
+
+    .footer a { color: #d4af37; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      .wrap { padding-top: 35px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <img class="logo" src="ww_mini_logo_50px.png" alt="Waylon Weiland logo">
+        <div>
+          <h1>Waylon Weiland — Press Kit</h1>
+          <p class="tagline">Outlaw country grit • Rock energy • Whiskey-soaked hooks</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a class="btn" href="index.html"><i class="fas fa-arrow-left"></i> Back to Site</a>
+        <a class="btn" href="press-kit.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Bio</h2>
+      <p class="muted">
+        Waylon Weiland blends outlaw country swagger with rock-driven punch—hooks you can yell, riffs you can feel,
+        and stories that hit like a barstool truth serum.
+      </p>
+      <p class="muted">
+        For booking, press, and collaborations:
+        <strong><a href="mailto:waylonweiland@gmail.com">waylonweiland@gmail.com</a></strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Featured Links</h2>
+      <div class="buttons">
+        <a class="btn" href="https://youtube.com/@waylonweiland" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> YouTube</a>
+        <a class="btn" href="https://open.spotify.com/artist/4j6qHDwChoSLyJjKfOsvnk" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Spotify</a>
+        <a class="btn" href="https://music.apple.com/us/artist/waylon-weiland/1821978193" target="_blank" rel="noopener"><i class="fab fa-apple"></i> Apple Music</a>
+        <a class="btn" href="https://linktr.ee/waylonweiland" target="_blank" rel="noopener"><i class="fas fa-link"></i> All Links</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Music & Media</h2>
+      <div class="two-col">
+        <div>
+          <strong>Recent releases</strong>
+          <ul class="list">
+            <li>Shough Around and Find Out</li>
+            <li>Rookie of the Year</li>
+            <li>Nose Beers</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Highlights</strong>
+          <ul class="list">
+            <li>Country-rock energy built for live crowds</li>
+            <li>Humor + grit + hooks</li>
+            <li>Perfect for sports hype & barroom playlists</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Photos</h2>
+      <p class="muted">
+        Add press photos to <code>/press-photos</code> in the repo, then link them here.
+      </p>
+      <ul class="list">
+        <li><span class="muted">Example:</span> <a href="press-photos/waylon-press-1.jpg">waylon-press-1.jpg</a></li>
+        <li><span class="muted">Example:</span> <a href="press-photos/waylon-press-2.jpg">waylon-press-2.jpg</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p><a href="index.html">waylonweiland.com</a> • <a href="https://linktr.ee/waylonweiland" target="_blank" rel="noopener">linktr.ee/waylonweiland</a></p>
+    </div>
+  </div>
+</body>
+</html>
